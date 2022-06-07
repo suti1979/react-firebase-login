@@ -25,7 +25,7 @@ export default function Signup() {
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
       navigate("/")
-    } catch(error) {
+    } catch (error) {
       setError(error + " Failed to create an account")
     }
 
@@ -52,7 +52,7 @@ export default function Signup() {
               <Form.Label>Password Confirmation</Form.Label>
               <Form.Control type="password" ref={passwordConfirmRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button disabled={loading} className="w-100 mt-3" type="submit">
               Sign Up
             </Button>
           </Form>
